@@ -69,7 +69,7 @@ export const LoginForm = () => {
           changeHandler={(e: ChangeEvent) => {
             handleFormChange(e, "password");
           }}
-          errorText="please enter a valid passord (8 length + at least lower and upper and number and special character)"
+          errorText="please enter a valid passord (at least 8 length + at least lower and upper and number and special character)"
           checkFormData={checkFormData}
           validateField={() => validatePassword(formData.password)}
           type="password"

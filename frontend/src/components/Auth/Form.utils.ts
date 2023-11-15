@@ -7,7 +7,7 @@ export const validatePassword = (password: string): boolean => {
   const checkLowerCase = /[a-z]/.test(password);
   const checkNumber = /\d+/.test(password);
   const checkSpecialChar = /\!|\?|\*|\^|\%|\(|\)|-/.test(password);
-  return checkUpperCase && checkLowerCase && checkNumber && checkSpecialChar && password.length > 8;
+  return checkUpperCase && checkLowerCase && checkNumber && checkSpecialChar && password.length >= 8;
 };
 
 export const validateEmail = (email: string): boolean => {

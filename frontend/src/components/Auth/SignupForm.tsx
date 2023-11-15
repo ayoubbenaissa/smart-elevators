@@ -51,6 +51,7 @@ export const SignupForm = () => {
           <img src={UserIcon} alt="Signup" />
         </div>
         <InputWithValidation
+          testId="user-name-input"
           placeholder="first name"
           value={formData.firstName}
           changeHandler={(e: ChangeEvent) => {
@@ -62,6 +63,7 @@ export const SignupForm = () => {
         />
 
         <InputWithValidation
+          testId="family-name-input"
           placeholder="family name"
           value={formData.lastName}
           changeHandler={(e: ChangeEvent) => {
@@ -73,6 +75,7 @@ export const SignupForm = () => {
         />
 
         <InputWithValidation
+          testId="email-input"
           placeholder="email"
           value={formData.email}
           changeHandler={(e: ChangeEvent) => {
@@ -85,12 +88,13 @@ export const SignupForm = () => {
         />
 
         <InputWithValidation
+          testId="password-input"
           placeholder="password"
           value={formData.password}
           changeHandler={(e: ChangeEvent) => {
             handleFormChange(e, "password");
           }}
-          errorText="please enter a valid passord (8 length + at least lower and upper and number character)"
+          errorText="please enter a valid passord (at least  8 length + at least lower and upper and number character)"
           checkFormData={checkFormData}
           validateField={() => validatePassword(formData.password)}
           type="password"
