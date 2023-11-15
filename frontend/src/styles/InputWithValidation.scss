@@ -1,0 +1,15 @@
+@use "variables";
+
+.input-with-validation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.error-info-container {
+  margin-top: 5px;
+}
+
+.error-info {
+  color: variables.$red;
+}

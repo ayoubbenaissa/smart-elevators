@@ -1,0 +1,16 @@
+@use "variables";
+@use "mixins";
+
+.elevators_list {
+  @include mixins.flex-column;
+  margin: 20px auto;
+  height: fit-content;
+  width: 80%;
+  padding: 20px 40px;
+  border-radius: 20px;
+  justify-content: space-between;
+}
+
+.elevators_list h2 {
+  margin: auto;
+}

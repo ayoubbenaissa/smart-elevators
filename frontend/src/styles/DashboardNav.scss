@@ -1,0 +1,31 @@
+@use "mixins";
+@use "variables";
+
+.nav-header {
+  @include mixins.flex-column;
+  position: sticky;
+  top: 0;
+  height: 40px;
+  justify-content: center;
+  padding-right: 10px;
+  background-color: rgb(68, 68, 68);
+  z-index: 100;
+}
+
+.nav-hello {
+  @include mixins.flex-row;
+}
+
+.user-fullname {
+  font-weight: 700;
+}
+
+.nav-content {
+  @include mixins.flex-row;
+  color: variables.$white;
+  justify-content: space-between;
+}
+
+.nav-logout {
+  cursor: pointer;
+}

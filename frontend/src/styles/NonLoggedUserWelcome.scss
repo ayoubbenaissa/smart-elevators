@@ -1,0 +1,37 @@
+@use "variables";
+@use "mixins";
+
+.welcome-unlogged {
+  @include mixins.flex-column;
+  font-size: 17px;
+}
+
+.welcome-unlogged-intro {
+  @include mixins.flex-row;
+  font-size: 25px;
+  font-weight: 600;
+  align-items: baseline;
+  margin-bottom: 10px;
+}
+
+.welcome-unlogged-app-name {
+  font-size: 30px;
+  font-weight: 700;
+  color: variables.$active-purple;
+}
+
+.welcome-unlogged-actions {
+  @include mixins.flex-column;
+}
+
+.welcome-unlogged-actions_wrapper {
+  @include mixins.flex-row;
+  margin: 10px 0px;
+  justify-content: space-between;
+
+  .welcome-unlogged-list_item {
+    & a {
+      text-decoration: none;
+    }
+  }
+}

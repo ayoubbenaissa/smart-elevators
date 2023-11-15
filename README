@@ -1,0 +1,9 @@
+# Elevators App 
+
+Please make sure to have a look at:
+- Server documentation [here](./server/README.md)
+- Frontend documentation [here](./frontend/README.md)
+
+**NOTE:** you can run both FE & BE by `make run-app`
+
+You can also have a quick demo check [here](./demo.webm)

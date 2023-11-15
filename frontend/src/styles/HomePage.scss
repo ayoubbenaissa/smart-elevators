@@ -1,0 +1,11 @@
+@use "variables";
+
+@use "mixins";
+
+.welcome-page {
+  @include mixins.page_styling;
+}
+
+.welcome-page_content {
+  @include mixins.page-content_styling;
+}

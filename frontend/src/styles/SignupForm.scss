@@ -1,0 +1,64 @@
+// importing common colors
+@use "variables";
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  background-color: variables.$white;
+  border-radius: 20px;
+}
+
+.signup-text {
+  align-self: center;
+}
+
+.signup-icon_wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5%;
+}
+
+.signup-input-field {
+  padding: 3px;
+  margin: 5px 10px;
+  border: 1.5px solid #000000;
+}
+
+.signup-input-field:hover {
+  border: 1.5px solid variables.$active-purple;
+}
+
+.error-info-container {
+  padding: 3px;
+  margin: 0px 10px;
+}
+
+.signup-form_actions {
+  margin-top: 5%;
+  display: flex;
+  justify-content: center;
+}
+
+.register-btn {
+  padding: 5px 20px;
+  background-color: variables.$white;
+  border: 2.5px solid variables.$purple;
+  border-radius: 20px;
+  text-transform: uppercase;
+  color: variables.$purple;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.register-btn:hover {
+  background-color: variables.$active-purple;
+  color: variables.$white;
+}
+
+.google-auth_container {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}

@@ -1,0 +1,29 @@
+@use "variables";
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+@mixin page_styling {
+  background-attachment: fixed;
+  height: inherit;
+  width: inherit;
+  display: flex;
+}
+
+@mixin page-content_styling {
+  display: flex;
+  flex-direction: column;
+  margin: auto auto;
+  padding: 20px 40px;
+  border-radius: 20px;
+  background-color: variables.$white;
+  box-shadow: 10px 5px 5px #888686;
+}

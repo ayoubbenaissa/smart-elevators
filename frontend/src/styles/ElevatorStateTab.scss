@@ -1,0 +1,21 @@
+@use "variables";
+
+.elevator-state_tab {
+  font-size: 20px;
+  font-weight: 600;
+  color: #3d3c3c;
+  cursor: pointer;
+  padding-bottom: 5px;
+}
+
+.elevator-state_tab.OPERATIONAL {
+  border-bottom: 2px solid variables.$green;
+}
+
+.elevator-state_tab.WARNING {
+  border-bottom: 2px solid variables.$orange;
+}
+
+.elevator-state_tab.OUT_OF_ORDER {
+  border-bottom: 2px solid variables.$red;
+}
