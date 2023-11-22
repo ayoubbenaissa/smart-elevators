@@ -1,6 +1,6 @@
 import { UserInfo } from "../app/features/auth/auth.types";
 import { ChartName, ElevatorResultItem, ElevatorState, ElevatorType } from "../app/features/elevators/elevators.types";
-import { ElevatorsStats } from "../pages/Dashboard/types";
+import { ElevatorsStats } from "../modules/Dashboard/types";
 
 export const MOCK_ELEVATORS: ElevatorResultItem[] = [
   {
@@ -190,5 +190,5 @@ export const UPDATED_INTERMEDIATE_STATS: ElevatorsStats = {
 export const LOGGED_USER: UserInfo = {
   firstName: "Demo",
   lastName: "User",
-  id: "user 001"
+  id: "user 001",
 };

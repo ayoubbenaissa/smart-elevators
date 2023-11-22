@@ -1,9 +1,9 @@
-import { selectStateTab } from "../../app/features/elevators/elevators.slice";
-import { useAppDispatch, useAppSelector } from "../../app/hooks";
+import { selectStateTab } from "@app/features/elevators/elevators.slice";
+import { useAppDispatch, useAppSelector } from "@app/hooks";
+import { ElevatorStates } from "@app/features/elevators/elevators.types";
 import { DivClickEvent } from "../Auth/types";
 
 import "../../styles/ElevatorStateTab.scss";
-import { ElevatorStates } from "../../app/features/elevators/elevators.types";
 
 export const ElevatorStateTab = ({ label, elevatorState }: { label: string; elevatorState: ElevatorStates }) => {
   const dispatch = useAppDispatch();

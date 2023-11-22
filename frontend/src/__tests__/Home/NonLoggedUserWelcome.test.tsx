@@ -1,5 +1,5 @@
 import { cleanup, screen } from "@testing-library/react";
-import { NonLoggedUserWelcome } from "../../pages/Home/NonLoggedUserWelcome";
+import { NonLoggedUserWelcome } from "../../modules/Home/NonLoggedUserWelcome";
 import { renderWithRouter } from "../../test.utils";
 
 import "@testing-library/jest-dom";

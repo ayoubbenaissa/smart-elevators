@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import { ActionButton } from "../../components/UI/ActionButton";
+import { ActionButton } from "../../components/UI/Buttons/ActionButton";
 
 import "@testing-library/jest-dom";
 

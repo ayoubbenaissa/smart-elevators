@@ -4,7 +4,7 @@ import { BrowserRouter, MemoryRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 import store from "./app/store";
 import { GoogleOAuthProvider } from "@react-oauth/google";
-import { LoginForm } from "./components/Auth/LoginForm";
+import { LoginForm } from "./modules/Login/LoginForm";
 
 export const renderWithRouter = (ui: React.ReactElement) => {
   const { rerender, ...result } = render(<BrowserRouter>{ui}</BrowserRouter>);

@@ -1,17 +1,17 @@
 import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { AuthState, LoginPayload, RegisterPayload, UserInfo } from "./auth.types";
 import authService from "./auth.service";
-import { extractUserInfo } from "./utils";
+import { extractUserInfo, getItemWithExpiry } from "./utils";
 import { RootState } from "../../store";
 import { extractError } from "../common/utils";
 import { Error } from "../common/types";
 
-const storedUserInfo = localStorage.getItem("user");
-const storedUserToken = localStorage.getItem("token");
+const storedUserInfo = getItemWithExpiry<UserInfo>({ key: "user" });
+const storedUserToken = getItemWithExpiry<string>({key: "token"});
 
 const initialState: AuthState = {
   loading: false,
-  userInfo: storedUserInfo ? JSON.parse(storedUserInfo) : null,
+  userInfo: storedUserInfo ? storedUserInfo : null,
   userToken: storedUserToken ? storedUserToken : null,
   success: false,
   error: null,

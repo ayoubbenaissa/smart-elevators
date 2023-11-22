@@ -1,5 +1,5 @@
 import { INITIAL_STATS, INTERMEDIATE_STATS, LOGGED_USER, MOCK_ELEVATORS, UPDATED_INITIAL_STATS, UPDATED_INTERMEDIATE_STATS } from "../../__mocks__/Dashboard.mocks";
-import { contructElevatorsStats, getElevatorReporter, getElevatorsWithState } from "../../pages/Dashboard/utils";
+import { contructElevatorsStats, getElevatorReporter, getElevatorsWithState } from "../../modules/Dashboard/utils";
 
 describe("testing utility functions for Dashboard page", () => {
   describe(`testing "contructElevatorsStats" functionality`, () => {
@@ -34,8 +34,8 @@ describe("testing utility functions for Dashboard page", () => {
       expect(elevatorReproterNameForSameUser).toBe("Me");
     });
     it("should return reporter full name when reporter is NOT the logged user", () => {
-        const elevatorReproterNameForSameUser = getElevatorReporter({ elevatorReporter: "Demo User2", currentUserInfo: LOGGED_USER });
-        expect(elevatorReproterNameForSameUser).toBe("Demo User2");
-      });
+      const elevatorReproterNameForSameUser = getElevatorReporter({ elevatorReporter: "Demo User2", currentUserInfo: LOGGED_USER });
+      expect(elevatorReproterNameForSameUser).toBe("Demo User2");
+    });
   });
 });

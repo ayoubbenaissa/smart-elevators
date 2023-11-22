@@ -1,10 +1,10 @@
-import { CredentialResponse, GoogleLogin } from "@react-oauth/google";
-import { useAppDispatch, useAppSelector } from "../../app/hooks";
-import { jwtDecode } from "jwt-decode";
-import { authorizeUser } from "../../app/features/auth/auth.slice";
-import { decodedGoogleObject } from "./types";
 import { useNavigate } from "react-router-dom";
-import { Error } from "../Error";
+import { CredentialResponse, GoogleLogin } from "@react-oauth/google";
+import { useAppDispatch, useAppSelector } from "@app/hooks";
+import { jwtDecode } from "jwt-decode";
+import { authorizeUser } from "@app/features/auth/auth.slice";
+import { decodedGoogleObject } from "./types";
+import { Error } from "../UI/Error/Error";
 
 export const GoogleAuth = () => {
   const navigator = useNavigate();
@@ -27,9 +27,9 @@ export const GoogleAuth = () => {
       console.log(" error Google Auth ", JSON.stringify(error));
       return (
         <>
-        <Error errorMessage={'error Google Auth'} />
+          <Error errorMessage={"error Google Auth"} />
         </>
-      )
+      );
     }
   };
 
@@ -40,9 +40,9 @@ export const GoogleAuth = () => {
   if (error) {
     return (
       <>
-      <Error errorMessage={JSON.stringify((error as any).response?.data?.message || "error")} />
+        <Error errorMessage={JSON.stringify((error as any).response?.data?.message || "error")} />
       </>
-    )
+    );
   }
 
   return <>{!userInfo && <GoogleLogin onSuccess={(credentialResponse) => handleSuccessfulLogin(credentialResponse)} onError={handleFailingLogin} />}</>;

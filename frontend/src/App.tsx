@@ -1,11 +1,11 @@
 import { Route, Routes } from "react-router-dom";
-import { Home } from "./pages/Home/Home";
-import { Signup } from "./pages/Signup";
+import { Home } from "./modules/Home/Home";
+import { Signup } from "./modules/Signup/Signup";
+import { Login } from "./modules/Login/Login";
+import { PageNotFound } from "./modules/PageNotFound/PageNotFound";
+import { Dashboard } from "./modules/Dashboard/DashboardPage/Dashboard";
 
 import "./App.css";
-import { Login } from "./pages/Login";
-import { NoPage } from "./pages/NoPage";
-import { Dashboard } from "./pages/Dashboard/Dashboard";
 
 export const App = () => {
   return (
@@ -15,7 +15,7 @@ export const App = () => {
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
         <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="*" element={<NoPage />} />
+        <Route path="*" element={<PageNotFound />} />
       </Routes>
     </>
   );

@@ -1,0 +1,18 @@
+// importing common colors
+@use "../../styles/variables";
+
+// importing mixins
+@use "../../styles/mixins";
+
+.page-not-found {
+  @include mixins.page_styling;
+}
+
+.page-not-found_content {
+  @include mixins.page-content_styling;
+}
+
+.page-not-found_info .home-link {
+  text-decoration: none;
+  color: variables.$active-purple;
+}

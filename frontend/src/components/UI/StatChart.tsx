@@ -1,5 +1,5 @@
 import { PieChart } from "@mui/x-charts";
-import { ElevatorsStats } from "../../pages/Dashboard/types";
+import { ElevatorsStats } from "../../modules/Dashboard/types";
 
 export const StatChart = ({ elevatorsStats }: { elevatorsStats: ElevatorsStats }) => {
   const data = [

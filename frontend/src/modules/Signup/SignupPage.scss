@@ -1,0 +1,23 @@
+// importing mixins
+@use "../../styles/mixins";
+
+.signup-page {
+  @include mixins.page_styling;
+}
+
+.signup-page-content {
+  @include mixins.page-content_styling;
+}
+
+.caption {
+  font-size: 25px;
+  font-weight: 800;
+  color: #1c1c1c;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
+.signup-form_wrapper {
+  background-color: #ffffffe7;
+  border-radius: 20px;
+}

@@ -1,5 +1,5 @@
 import { cleanup } from "@testing-library/react";
-import { LoggedUserWelcome } from "../../pages/Home/LoggedUserWelcome";
+import { LoggedUserWelcome } from "../../modules/Home/LoggedUserWelcome";
 import { MOCK_USER } from "../../__mocks__/Users.mock";
 
 import "@testing-library/jest-dom";
