@@ -10,16 +10,15 @@ export interface User {
 
 export interface IUserDocument extends User, Document<ObjectId> {
   fullName: string;
-};
+}
 
 interface SigninBody {
   email: string;
-    password: string;
+  password: string;
 }
 
-
 export interface TypedRequestBody<T> extends Request {
-  body: T
+  body: T;
 }
 
 export interface SignupReq extends TypedRequestBody<User> {}

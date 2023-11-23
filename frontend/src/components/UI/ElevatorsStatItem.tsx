@@ -5,7 +5,6 @@ import { DivClickEvent } from "../Auth/types";
 
 import "../../styles/ElevatorsStatItem.scss";
 
-
 export const ElevatorsStatItem = ({ elevatorStatsItem, icon, elevatorState }: { elevatorStatsItem: ElevatorStatsItem; icon: string; elevatorState: keyof ElevatorsStats }) => {
   const dispatch = useAppDispatch();
   const handleSetSelectedElevatorState = (e: DivClickEvent) => {
