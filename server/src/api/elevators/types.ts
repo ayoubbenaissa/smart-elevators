@@ -10,7 +10,7 @@ export type DoorData = {
   door_opened_count: number;
 };
 
-enum ElevatorType {
+export enum ElevatorType {
   PASSENGER = "Passenger",
   FREIGHT = "Freight",
 }

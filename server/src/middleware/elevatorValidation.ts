@@ -9,8 +9,8 @@ const schemaValidationOptions = {
     stripUnknown: true, // remove unknown props
 };
 
-const schemaElevatorType = Joi.string().valid('Passenger', 'Freight');
-const schemaElevatorState = Joi.string().valid("operational", "warning", "out-of-order");
+const schemaElevatorType = Joi.string().required().valid('Passenger', 'Freight');
+const schemaElevatorState = Joi.string().required().valid("operational", "warning", "out-of-order");
 const schemaChartName = Joi.string().required().valid("door_cycle_count_over_time");
 const schemaDoorData = Joi.object({
     time: Joi.date().required(),
@@ -49,7 +49,7 @@ export const validateElevator = async (req: CreateElevatorReq, res: Response, ne
     };
     const { error, value } = schemaElevator.validate(newElevatorData, schemaValidationOptions);
     if (error) {
-        return res.status(400).send({ message: `Validation error: ${error.details.map((x) => x.message).join(", ")}` });
+        return res.status(400).json({ message: `Validation error: ${error.details.map((x) => x.message).join(", ")}` });
     }
     if (value) {
         return next();
